@@ -20,7 +20,7 @@ title                    : "blasterman's base"
 title_separator          : "|"
 subtitle                 : # "Building better boxes :)" # site tagline that appears below site title in masthead
 name                     : "Joffrey"
-description              : "A place for my projects and information. Never stop asking questions."
+description              : "A simple website collect my thoughts and upload information."
 url                      : "https://blasterman.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/blastermans-base" # the subpath of your site, e.g. "/blog"
 repository               : "blasterman/blastermans-base" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
