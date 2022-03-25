@@ -103,7 +103,7 @@ analytics:
 # Site Author
 author:
   name             : "Joffrey"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/79620766.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am a **cool** person."
   location         : "Washington, USA"
   email            :
@@ -116,13 +116,13 @@ author:
       # url: "https://blasterman.github.io/blastermans-base/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/blsterman1"
+      url: "https://twitter.com/blsterman1"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/blasterman"
+      url: "https://github.com/blasterman"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
