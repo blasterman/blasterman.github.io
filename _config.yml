@@ -104,7 +104,7 @@ analytics:
 author:
   name             : "Joffrey"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "I am an **cool** person."
   location         : "Washington, USA"
   email            :
   links:
@@ -138,7 +138,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-       url: "https://github.com/blasterman"
+      # url: "https://github.com/blasterman"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
