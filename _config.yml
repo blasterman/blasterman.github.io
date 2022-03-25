@@ -104,7 +104,7 @@ analytics:
 author:
   name             : "Joffrey"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **cool** person."
+  bio              : "I am a **cool** person."
   location         : "Washington, USA"
   email            :
   links:
