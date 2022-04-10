@@ -13,6 +13,8 @@ To begin the process of identifying how I would go about gaining access to the m
 
 ![Picture of burp showing the intercepted page info]({{ site.url }}/assets/images/write_ups/tryhackme/upload_vulns/first_burp_intercept.png)
 
+{% raw %}<img src="{{ site.url }}{{ site.baseurl }}/assets/images/write_ups/tryhackme/upload_vulns/first_burp_intercept.png" alt="">{% endraw %}
+
 From line 5 we can see that something called Express is powering the display of the page. A quick search online reveals that Express is a web framework for Node.js, a JavaScript framework. This tells me that the .php extension that I’ve been using in the lesson prior won’t work here; I’ll have to use a script written in the language the framework is using.
 
 With that out of the way, it’s time to get hands-on with the enumeration!
