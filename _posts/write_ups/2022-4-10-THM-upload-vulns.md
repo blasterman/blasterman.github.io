@@ -220,7 +220,7 @@ Looking back on what I was taught, it is possible intercept a legit upload and c
 Here we are. We can see the name, MIME type, and the data itself contained within this legitimate jpeg that I’m uploading. There’s no reason to change the first two but the data itself is something that I can work with. For the third field, we see that there’s something at the beginning of all that gibberish that gives us a clue: `data:image/jpeg;base64,`. Aside from it telling us what it is (we know that already), this is indicating that all the data that constitutes the picture is going over encoded in base64. And since I can modify the contents of the file before letting it get to the server, maybe I can overwrite the image with my payload? Let’s give it a shot.
 
 
-Copying the contents of my payload, I’ll head over to a public website that can encode text to base64.
+Copying the contents of my payload, I’ll head over to a website that can encode text to base64.
 
 
 ![base64 encoding](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/base64_encoding.png)
