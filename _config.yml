@@ -159,8 +159,6 @@ include:
   - .htaccess
   - _pages
   - _posts
-  - _pages
-  - assets/images/write_ups/tryhackme/upload_vulns
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
