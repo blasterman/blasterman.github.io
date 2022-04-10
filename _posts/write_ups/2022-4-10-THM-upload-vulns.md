@@ -11,7 +11,7 @@ Enjoy! 😁
 
 To begin the process of identifying how I would go about gaining access to the machine, I first needed to ascertain what backend the server is using to display the website. The lesson tips me off to this so I figure it would be a good idea to check. A simple intercept with BurpSuite can tell me this:
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/write_ups/tryhackme/upload_vulns/first_burp_intercept.png" alt="" />
+![First burp intercept](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/first_burp_intercept.png)
 
 From line 5 we can see that something called Express is powering the display of the page. A quick search online reveals that Express is a web framework for Node.js, a JavaScript framework. This tells me that the .php extension that I’ve been using in the lesson prior won’t work here; I’ll have to use a script written in the language the framework is using.
 
@@ -29,7 +29,7 @@ Next, I try to upload a smaller file this time in the .png format.
 
 Now I (roughly) know that the webpage will allow me to upload to the server. The next thing I want to do is to get a visual of how the webpage is configured and if there are any filters that might be there.
 
-![Jewel page source pic](/assets/images/write_ups/tryhackme/upload_vulns/page_source.png)
+![Jewel page source pic](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/page_source.png)
 
 From a quick look, it’s evident that there are two spots of interest in the page’s source regarding the filters.
 
@@ -42,23 +42,23 @@ Now, at this point, I know that I could look at the upload.js script directly an
 
 Since my goal is to upload a payload that’ll get me a reverse shell on the machine, I’ll use `msfvenom` to automatically generate one for me since the payload needs to be in JavaScript and aimed at exploiting Node.js.
 
-![Picture of msfvenom command line](/assets/images/write_ups/tryhackme/upload_vulns/msfvenom_payload.png)
+![Picture of msfvenom command line](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/msfvenom_payload.png)
 
 Done! Now all that’s left is to change the extension from `.js` to `.jpg` and see if the file uploads!
 
-![Failed upload pic](/assets/images/write_ups/tryhackme/upload_vulns/invalid_file.png)
+![Failed upload pic](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/invalid_file.png)
 
 Darn. Even though the file has the right extension and is small enough in size, there seems to be yet another parameter being used to check the upload. My suspicion is that it’s also looking at the file’s signature (as this was another topic covered in the THM room) and determining if it’s actually a jpg or not. I’m going to test this out by editing the hex values and adding the magic numbers that are usually associated with this image format. Wikipedia tells me that there are three different combination of hex values that can used to spoof the file type and, for the sake of ease, I’ll use the shortest one which is `FF D8 FF EE`.
 
-![hexedit pic](/assets/images/write_ups/tryhackme/upload_vulns/hexedit.png)
+![hexedit pic](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/hexedit.png)
 
 Save the file and call it good. Let’s use `file` to see what type of file it appears to be now.
 
-![file command pic](/assets/images/write_ups/tryhackme/upload_vulns/file_command.png)
+![file command pic](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/file_command.png)
 
 Okay. The file is now appearing to be jpeg image data. A quick rename from `shell.js` to `shell.jpg` to finish and now I can attempt the upload again:
 
-![file success upload pic](/assets/images/write_ups/tryhackme/upload_vulns/successful_upload.png)
+![file success upload pic](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/successful_upload.png)
 
 Nice! It seems that adding those magic numbers to spoof the payload’s signature did the trick. 
 
