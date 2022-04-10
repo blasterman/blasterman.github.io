@@ -7,12 +7,17 @@ Hello. This is my first ever write-up for the THM room "Upload Vulnerabilities"!
 
 Enjoy! 😁
 
+***
+
+
 ### Discovering the Filters:
 
 To begin the process of identifying how I would go about gaining access to the machine, I first needed to ascertain what backend the server is using to display the website. The lesson tips me off to this so I figure it would be a good idea to check. A simple intercept with BurpSuite can tell me this:
 
 
+
 ![First burp intercept](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/first_burp_intercept.png)
+
 
 
 From line 5 we can see that something called Express is powering the display of the page. A quick search online reveals that Express is a web framework for Node.js, a JavaScript framework. This tells me that the .php extension that I’ve been using in the lesson prior won’t work here; I’ll have to use a script written in the language the framework is using.
@@ -121,7 +126,7 @@ Bummer. Though `gobuster` sees this folder, it appears that it’s off-limits. I
 ![pic of module doesn’t exist error](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/admin_page_test1_fail.png)
 
 
-Okay. So I guess that I can only run modules that are contained in the `/modules` folder. 
+Okay. So I guess that I can only run modules that are contained in the `/modules` folder, or so it says.
 
 At this point, I’ve got the file structure, but I still don’t know where my file is since I can’t view the three other folders from the website. Thankfully, `gobuster` can also check for files as well. From the challenge section, we are tipped off to the fact that the server renames all files uploaded to short, random strings and this is evident from the wordlist provided. Plus, since I uploaded my payload as a jpg, I know what I’m looking for.
 
@@ -135,7 +140,7 @@ Here I’m telling it to scan the `/content` folder and look for any file that h
 ![gobuster scan results](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/gobuster_file_scan_results.png)
 
 
-There’s quite a few jpg files here but which one is mine? The results not only show the file itself but also the size. Maybe we can use this to identify which one is my payload. First, I’ll check the details of the payload I uploaded that’s on my computer:
+There’s quite a few jpg files here but which one is mine? The results not only show the file itself but also the size. Maybe we can use this to identify which one is my payload. Let's check the details of the payload on my machine:
 
 
 ![stat command results](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/stat_shell.jpg.png)
@@ -163,7 +168,7 @@ That’s odd. The script is clearly on the server and should be running but, for
 After doing some thinking, I hypothesized that the problem might be due to the magic numbers that I inserted into the beginning of the code within the file. Usually, when code is being executed, the first line (that’s not a comment) always begins the set of instructions sent to the machine.
 
 
-![pic of special chars in payload](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/stat_magic_numbers_chars.png)
+![pic of special chars in payload](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/shell_magic_numbers_chars.png)
 
 
 These odd-looking characters in the file are no doubt a representation of the magic numbers that I placed into the file to make it appear to be a jpeg image. Yet, these same characters are probably getting in the way of the execution of the actual code. Removing these characters will undo some work but it should allow the payload to execute.
@@ -173,7 +178,7 @@ But that raises another problem: if I restore the file signature, the file itsel
 This is where I return to Burp Suite. I recall from the lesson room that I can intercept a page before it loads and modify the source before it renders on my browser.
 
 
-![burp page source intercept](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/burp_response_page.png)
+![burp page source intercept](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/burp_response_page_source.png)
 
 
 So now I’ll take this section…
@@ -209,7 +214,7 @@ By now, I’ve tried conforming to the filters and removing the filters, but bot
 Looking back on what I was taught, it is possible intercept a legit upload and change the contents midway, thus bypassing the local filtering. Time to see what an honest upload looks like in Burp.
 
 
-![honest upload](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/)
+![honest upload](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/honest_upload.png)
 
 
 Here we are. We can see the name, MIME type, and the data itself contained within this legitimate jpeg that I’m uploading. There’s no reason to change the first two but the data itself is something that I can work with. For the third field, we see that there’s something at the beginning of all that gibberish that gives us a clue: `data:image/jpeg;base64,`. Aside from it telling us what it is (we know that already), this is indicating that all the data that constitutes the picture is going over encoded in base64. And since I can modify the contents of the file before letting it get to the server, maybe I can overwrite the image with my payload? Let’s give it a shot.
