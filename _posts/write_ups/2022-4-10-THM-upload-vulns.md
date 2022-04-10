@@ -11,7 +11,7 @@ Enjoy! 😁
 
 To begin the process of identifying how I would go about gaining access to the machine, I first needed to ascertain what backend the server is using to display the website. The lesson tips me off to this so I figure it would be a good idea to check. A simple intercept with BurpSuite can tell me this:
 
-![Picture of burp showing the intercepted page info](/assets/images/write_ups/tryhackme/upload_vulns/first_burp_intercept.png)
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/404_page.png" alt="" />
 
 From line 5 we can see that something called Express is powering the display of the page. A quick search online reveals that Express is a web framework for Node.js, a JavaScript framework. This tells me that the .php extension that I’ve been using in the lesson prior won’t work here; I’ll have to use a script written in the language the framework is using.
 
@@ -66,7 +66,7 @@ Nice! It seems that adding those magic numbers to spoof the payload’s signatur
 
 Before moving onto the next phase, a quick recap is in order: from everything that I’ve done so far, I’ve discovered that files that are being upload are going through filters that scan the extension, size, and file signature of whatever is being uploaded. Remember the `upload.js` from the page source? Let’s look at it now and see how accurate my results are:
 
-<img src="{{site.baseurl | prepend: site.url}}assets/images/write_ups/tryhackme/upload_vulns/uploadjs_code.png" alt="uploadjs"/>
+![upload.js code pic](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/uploadjs_code.png)
 
 There it is; the same three filters I figured were in place are clearly outlined in this script. Again, I could’ve looked at this initially and saved myself some time and effort but… where’s the fun in that?
 
