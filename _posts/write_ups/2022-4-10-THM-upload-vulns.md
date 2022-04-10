@@ -66,7 +66,7 @@ Nice! It seems that adding those magic numbers to spoof the payload’s signatur
 
 Before moving onto the next phase, a quick recap is in order: from everything that I’ve done so far, I’ve discovered that files that are being upload are going through filters that scan the extension, size, and file signature of whatever is being uploaded. Remember the <upload.js> from the page source? Let’s look at it now and see how accurate my results are:
 
-![upload.js code pic](/assets/images/write_ups/tryhackme/upload_vulns/uploadjs_code.png)
+![upload.js code pic](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/uploadjs_code.png)
 
 There it is; the same three filters I figured were in place are clearly outlined in this script. Again, I could’ve looked at this initially and saved myself some time and effort but… where’s the fun in that?
 
