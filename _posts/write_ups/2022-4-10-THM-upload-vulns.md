@@ -25,7 +25,7 @@ I need to find what, if any, file upload filters are being employed by the serve
 
 Next, I try to upload a smaller file this time in the .png format.
 
-![Invalid filetype error](/assets/images/write_ups/tryhackme/upload_vulns/invalid_file.png)
+![Invalid filetype error](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/invalid_file.png)
 
 Now I (roughly) know that the webpage will allow me to upload to the server. The next thing I want to do is to get a visual of how the webpage is configured and if there are any filters that might be there.
 
