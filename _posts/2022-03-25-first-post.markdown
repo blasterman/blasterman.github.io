@@ -1,5 +1,4 @@
 ---
-layout: single
 title:  "Test/First Post"
 date:   2022-03-25
 ---
