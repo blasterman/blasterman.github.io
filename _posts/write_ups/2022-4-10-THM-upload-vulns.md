@@ -5,6 +5,8 @@ title: "TryHackMe - Upload Vulnerabilities"
 
 Hello. This is my first ever write-up for the THM room "Upload Vulnerabilities"! This is a great room and I had just as much writing about it as I did actually doing it.
 
+This room can be found at this link: [https://tryhackme.com/room/uploadvulns](https://tryhackme.com/room/uploadvulns)
+
 Enjoy! 😁
 
 ***
