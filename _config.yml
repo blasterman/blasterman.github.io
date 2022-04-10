@@ -299,6 +299,17 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # write_ups
+  - scope:
+      path: "_posts/write_ups"
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
 
 
 # Collections
