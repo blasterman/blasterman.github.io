@@ -81,7 +81,7 @@ Since the payload is now uploaded, it’s time to find and activate it! But… I
 
 From this we can deduce that my upload is in one of these four directories (side note: I do know that, from looking at the page source, `/assets` was a folder. `gobuster` confirms this for me). I have a good idea where my payload is but, just out of curiosity, I’ll look at all these directories, starting with `/assets`.
 
-![404 error pic](/assets/images/write_ups/tryhackme/upload_vulns/404_page.png)
+![404 error pic](/assets/images/404_page.png)
 
 Bummer. Though `gobuster` sees this folder, it appears that it’s off-limits. In fact, trying this with both the `/contents` and `/modules` folders yield the same result. But, the `/admin`…
 
