@@ -23,7 +23,9 @@ With that out of the way, it’s time to get hands-on with the enumeration!
 
 I need to find what, if any, file upload filters are being employed by the server and/or webpage. I’ll start by first uploading a jpg picture of a gem that I grabbed from the internet. Upon selecting it from the file explorer prompt that comes up, it seems the page attempts to upload it immediately.
 
+
 * The webpage gives me a "Filesize Too Big" error. This implies that, while it accepted the jpg, the file was too big. 
+
 
 Next, I try to upload a smaller file this time in the .png format:
 
