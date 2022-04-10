@@ -10,9 +10,10 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                  : "minimal-mistakes-jekyll"
+# Site theme                  : "minimal-mistakes-jekyll"
 remote_theme             : "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "default"
+
 
 # Site Settings
 locale                   : "en-US"
@@ -28,7 +29,7 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
+words_per_minute         : 300
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
@@ -77,6 +78,7 @@ naver_site_verification  :
 yandex_site_verification :
 baidu_site_verification  :
 
+
 # Social Sharing
 twitter:
   username               : "blsterman1"
@@ -91,6 +93,7 @@ social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+
 
 # Analytics
 analytics:
@@ -126,6 +129,7 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
+
 
 # Site Footer
 footer:
@@ -185,15 +189,6 @@ keep_files:
   - .svn
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-# Collections
-collections:
-  tryhackme:
-    output: true
-    permalink: /_posts/write_ups/tryhackme/
-  hackthebox:
-    output: true
-    permalink: /_posts/write_ups/hackthebox/
 
 
 # Conversion
@@ -293,7 +288,17 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: false
-      comments: # true
+      read_time: true
+      comments: false
       share: true
       related: true
+
+
+# Collections
+collections:
+  tryhackme:
+    output: true
+    permalink: /_posts/write_ups/tryhackme/
+  hackthebox:
+    output: true
+    permalink: /_posts/write_ups/hackthebox/
