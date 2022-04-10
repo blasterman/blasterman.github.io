@@ -310,6 +310,10 @@ defaults:
       comments: false
       share: true
       related: true
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
 
 
 # Collections
