@@ -154,7 +154,7 @@ Great! Now I just need to launch the payload. To do this, I’ll head over to th
 And press enter. Let’s see what happens:
 
 
-![pic of first fail](/assets/images/write_ups/tryhackme/upload_vulns/admin_page_test1_fail.png)
+![pic of first fail](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/admin_page_test1_fail.png)
 
 That’s odd. The script is clearly on the server and should be running but, for some reason, nothing happens and netcat shows that no connection has been made.
 
