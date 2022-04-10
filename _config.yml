@@ -186,6 +186,15 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
+# Collections
+collections:
+  tryhackme:
+    output: true
+    permalink: /_posts/write_ups/tryhackme/
+  hackthebox:
+    output: true
+    permalink: /_posts/write_ups/hackthebox/
+
 
 # Conversion
 markdown: kramdown
