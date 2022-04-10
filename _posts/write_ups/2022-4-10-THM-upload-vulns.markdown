@@ -3,11 +3,15 @@ title: "TryHackMe - Upload Vulnerabilities"
 
 ---
 
+Hello. This is my first ever write-up for the THM room "Upload Vulnerabilities"! This is a great room and I had just as much writing about it as I did actually doing it.
+
+Enjoy! 😁
+
 ### Discovering the Filters:
 
 To begin the process of identifying how I would go about gaining access to the machine, I first needed to ascertain what backend the server is using to display the website. The lesson tips me off to this so I figure it would be a good idea to check. A simple intercept with BurpSuite can tell me this:
 
-![Picture of burp showing the intercepted page info](/assets/images/write_ups/tryhackme/upload_vulns/first_burp_intercept.png)
+![Picture of burp showing the intercepted page info](assets/images/write_ups/tryhackme/upload_vulns/first_burp_intercept.png)
 
 From line 5 we can see that something called Express is powering the display of the page. A quick search online reveals that Express is a web framework for Node.js, a JavaScript framework. This tells me that the .php extension that I’ve been using in the lesson prior won’t work here; I’ll have to use a script written in the language the framework is using.
 
@@ -40,7 +44,7 @@ Since my goal is to upload a payload that’ll get me a reverse shell on the mac
 
 ![Picture of msfvenom command line](/assets/images/write_ups/tryhackme/upload_vulns/msfvenom_payload.png)
 
-Done! Now all that’s left is to change the extension from .js to .jpg and see if the file uploads!
+Done! Now all that’s left is to change the extension from `.js` to `.jpg` and see if the file uploads!
 
 ![Failed upload pic](/assets/images/write_ups/tryhackme/upload_vulns/invalid_file.png)
 
@@ -79,7 +83,7 @@ From this we can deduce that my upload is in one of these four directories (side
 
 ![404 error pic](/assets/images/write_ups/tryhackme/upload_vulns/404_page.png)
 
-Bummer. Though gobuster sees this folder, it appears that it’s off-limits. In fact, trying this with both the `/contents` and `/modules` folders yield the same result. But, the `/admin`…
+Bummer. Though `gobuster` sees this folder, it appears that it’s off-limits. In fact, trying this with both the `/contents` and `/modules` folders yield the same result. But, the `/admin`…
 
 ![pic of admin page](/assets/images/write_ups/tryhackme/upload_vulns/admin_page.png)
 
@@ -101,7 +105,7 @@ There’s quite a few jpg files here but which one is mine? The results not only
 
 ![stat command results](/assets/images/write_ups/tryhackme/upload_vulns/stat_shell.jpg.png)
 
-So I’m looking for a file that’s 803 kb in size. We can see from prior results that my file is on the server as “UEB.jpg”. Since I’m ready to launch the payload, let’s get netcat running to listen for my reverse shell on port 3388. 
+So I’m looking for a file that’s 803 kb in size. We can see from prior results that my file is on the server as `UEB.jpg`. Since I’m ready to launch the payload, let’s get netcat running to listen for my reverse shell on port 3388. 
 
 ![pic of netcat listening](/assets/images/write_ups/tryhackme/upload_vulns/netcat_listening.png)
 
@@ -168,7 +172,7 @@ Cool! The upload made it to the server. Now I just need to run gobuster again to
 
 ![gobuster results 2](/assets/images/write_ups/tryhackme/upload_vulns/gobuster_file_scan_results_2.png)
 
-Comparing this to the previous scan, I can immediately tell which is the new file: XTB.jpg. All that’s left is to head back over to `/admin` and try to run the payload again!
+Comparing this to the previous scan, I can immediately tell which is the new file: `XTB.jpg`. All that’s left is to head back over to `/admin` and try to run the payload again!
 
 ![admin page w/ new command](/assets/images/write_ups/tryhackme/upload_vulns/admin_page_test2.png)
 
@@ -186,7 +190,9 @@ I’m logged in as root, my home directory is `/var/www/html/`, and I can see fi
 
 Bingo. All that remains now is to cat the text file and take the flag! Victory! 
 
+
 ***
+
 
 I have to say that I had fun taking on this challenge and completing the Upload Vulnerabilities room on TryHackMe. It was difficult but it forced me to think creatively and outside-the-box in order to get around the security measures and gain remote access. It took some time but the process of trial-and-error that eventually led to my victory gave a sense of accomplishment. I daresay that, if this final challenge hadn’t been included, I don’t think I would’ve walked away from this lesson with as strong an understanding of these concepts as I did. As such, I am very grateful to MuirlandOracle for taking the time to make this room.
 
