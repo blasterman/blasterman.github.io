@@ -3,7 +3,7 @@ title:  "TryHackMe - Upload Vulnerabilities"
 date:   2022-04-10
 ---
 
-Hello! This is my first ever write-up for the THM room "Upload Vulnerabilities". This is a great room and I had just as much writing about it as I did actually doing it.
+Hello! This is my first ever write-up for the THM room "Upload Vulnerabilities".
 
 The room can be found at this link: [https://tryhackme.com/room/uploadvulns](https://tryhackme.com/room/uploadvulns)
 
@@ -17,9 +17,7 @@ Enjoy! 😁
 To begin the process of identifying how I would go about gaining access to the machine, I first needed to ascertain what backend the server is using to display the website. The lesson tips me off to this so I figure it would be a good idea to check. A simple intercept with BurpSuite can tell me this:
 
 
-
 ![First burp intercept](/blastermans-base/assets/images/write_ups/tryhackme/upload_vulns/first_burp_intercept.png)
-
 
 
 From line 5 we can see that something called Express is powering the display of the page. A quick search online reveals that Express is a web framework for Node.js, a JavaScript framework. This tells me that the .php extension that I’ve been using in the lesson prior won’t work here; I’ll have to use a script written in the language the framework is using.
