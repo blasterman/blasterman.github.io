@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "dirt" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "blasterman's base"
+title                    : "Blasterman's Base"
 title_separator          : "|"
 subtitle                 : # "Building better boxes :)" # site tagline that appears below site title in masthead
 name                     : "Joffrey"
