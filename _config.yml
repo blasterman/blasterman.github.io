@@ -301,7 +301,7 @@ defaults:
       author_profile: true
   # write_ups
   - scope:
-      path: "docs/write_ups"
+      path: "docs/_write_ups"
       type: posts
     values:
       layout: single
