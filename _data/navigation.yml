@@ -1,7 +1,7 @@
-main:
-  - title: "Write-Ups"
-    url: /_posts/write_ups/
-  - title: "Projects"
-    url: /projects/
-  - title: "Posts"
-    url: /posts/
+#main:
+#  - title: "Write-Ups"
+#    url: /write_ups/
+#  - title: "Projects"
+#    url: /projects/
+#  - title: "Posts"
+#    url: /posts/
