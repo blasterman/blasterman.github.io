@@ -107,7 +107,7 @@ analytics:
 author:
   name             : "Joffrey"
   avatar           : "/assets/images/1614300612211.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am a biological... I think. 😁"
+  bio              : "I am a biological... I think."
   location         : "Washington, USA"
   email            :
   links:
@@ -294,14 +294,14 @@ defaults:
       related: true
   # _pages
   - scope:
-      path: "_pages"
+      path: ""
       type: pages
     values:
       layout: single
       author_profile: true
-  # _write_ups
+  # write_ups
   - scope:
-      path: ""
+      path: "_posts/write_ups"
       type: posts
     values:
       layout: single
@@ -310,14 +310,13 @@ defaults:
       comments: false
       share: true
       related: true
-  # _projects
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: false
-      share: true
-      related: true
+
+
+# Collections
+#collections:
+#  tryhackme:
+#    output: true
+#    permalink: /_posts/write_ups/tryhackme/
+#  hackthebox:
+#    output: true
+#    permalink: /_posts/write_ups/hackthebox/
