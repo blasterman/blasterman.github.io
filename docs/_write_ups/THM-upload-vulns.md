@@ -1,5 +1,5 @@
 ---
-permalink: /THM-upload-vulns/
+# permalink: /THM-upload-vulns/
 title:  "TryHackMe - Upload Vulnerabilities"
 date:   2022-04-10
 ---
