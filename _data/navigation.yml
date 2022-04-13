@@ -1,3 +1,7 @@
 main:
-  - title: "Category 1"
-    url: /categories/
+  - title: "Write-Ups"
+    url: /_posts/write_ups/
+  - title: "Projects"
+    url: /projects/
+  - title: "Posts"
+    url: /posts/
