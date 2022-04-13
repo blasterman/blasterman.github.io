@@ -310,13 +310,3 @@ defaults:
       comments: false
       share: true
       related: true
-
-
-# Collections
-collections:
-  tryhackme:
-    output: true
-    permalink: /_posts/write_ups/tryhackme/
-  hackthebox:
-    output: true
-    permalink: /_posts/write_ups/hackthebox/
