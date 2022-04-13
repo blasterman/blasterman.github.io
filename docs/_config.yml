@@ -283,7 +283,7 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: "docs/_posts"
+      path: ""
       type: posts
     values:
       layout: single
@@ -294,14 +294,14 @@ defaults:
       related: true
   # _pages
   - scope:
-      path: "docs/_pages"
+      path: "_pages"
       type: pages
     values:
       layout: single
       author_profile: true
-  # write_ups
+  # _write_ups
   - scope:
-      path: "docs/_write-ups"
+      path: ""
       type: posts
     values:
       layout: single
@@ -310,9 +310,9 @@ defaults:
       comments: false
       share: true
       related: true
-  # projects
+  # _projects
   - scope:
-      path: "docs/projects"
+      path: ""
       type: posts
     values:
       layout: single
