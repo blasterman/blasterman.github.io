@@ -301,7 +301,7 @@ defaults:
       author_profile: true
   # write_ups
   - scope:
-      path: "_posts/write_ups"
+      path: "_posts/writeups"
       type: posts
     values:
       layout: single
@@ -309,14 +309,19 @@ defaults:
       read_time: true
       comments: false
       share: true
-      related: true
+  # _write_ups
+  - scope:
+      path: ""
+      type: writeups
+    values:
+      layout: single
+      author_profile: true
+      comments: false
+      share: true
 
 
 # Collections
-#collections:
-#  tryhackme:
-#    output: true
-#    permalink: /_posts/write_ups/tryhackme/
-#  hackthebox:
-#    output: true
-#    permalink: /_posts/write_ups/hackthebox/
+collections:
+  write_ups:
+    output: true
+    permalink: /write_ups/
