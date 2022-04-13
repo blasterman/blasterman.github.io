@@ -1,10 +1,11 @@
 ---
-# permalink: /THM-upload-vulns/
 title:  "TryHackMe - Upload Vulnerabilities"
 date:   2022-04-10
+Categories: 
+  - Write-Ups
 ---
 
-Hello! This is my first ever write-up for the THM room "Upload Vulnerabilities".
+Hello! This is my write-up for the THM room "Upload Vulnerabilities" (and also my first one overall).
 
 The room can be found at this link: [https://tryhackme.com/room/uploadvulns](https://tryhackme.com/room/uploadvulns)
 

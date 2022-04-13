@@ -21,7 +21,7 @@ title                    : "blasterman's base"
 title_separator          : "|"
 subtitle                 : # "Building better boxes :)" # site tagline that appears below site title in masthead
 name                     : "Joffrey"
-description              : "A simple website collect my thoughts and upload information."
+description              : # "A simple website collect my thoughts and upload information."
 url                      : "https://blasterman.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/blastermans-base" # the subpath of your site, e.g. "/blog"
 repository               : "blasterman/blastermans-base" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -107,7 +107,7 @@ analytics:
 author:
   name             : "Joffrey"
   avatar           : "/assets/images/1614300612211.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am a biological... I think."
+  bio              : "I am a biological... I think. 😁"
   location         : "Washington, USA"
   email            :
   links:
@@ -232,6 +232,7 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-remote-theme
+  - jekyll-archives
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -253,22 +254,22 @@ whitelist:
 #  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
-  type: liquid
+  type: jekyll-archives
   path: /categories/
 tag_archive:
-  type: liquid
+  type: jekyll-archives
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 
 
 # HTML Compression
@@ -309,3 +310,15 @@ defaults:
       read_time: true
       comments: false
       share: true
+  # tags
+  - scope:
+      path: ""
+      type: tag
+    values:
+      author_profile: true
+  # categories
+  - scope:
+      path: ""
+      type: category
+    values:
+      author_profile: true
