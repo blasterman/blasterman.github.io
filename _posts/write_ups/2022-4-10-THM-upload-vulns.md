@@ -1,7 +1,7 @@
 ---
 title:  "TryHackMe - Upload Vulnerabilities"
 date:   2022-04-10
-Categories: 
+categories: 
   - Write-Ups
 ---
 
