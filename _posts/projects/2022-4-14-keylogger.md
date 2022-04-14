@@ -4,7 +4,7 @@ date: 2022-04-14
 categories: Projects
 ---
 
-The keylogger. The big, bad, sinister program responsible for stealing all your login credentials and, subsequently, your information. Many criminals or those with criminal intent will sometimes call upon the use of a program such as this in a bid to gain access to a network or computer system. For the uninitied, the task of creating and deploying a keylogger may seem like a complicated task but, in reality, it's actually quite simple to get one up and running.
+The *keylogger*. The big, bad, sinister program responsible for stealing all your login credentials and, subsequently, your information. Many criminals or those with criminal intent will sometimes call upon the use of a program such as this in a bid to gain access to a network or computer system. For the uninitied, the task of creating and deploying a keylogger may seem like a complicated task but, in reality, it's actually quite simple to get one up and running.
 
 Before we begin, I must give credit to **CyberFault** who made the [YouTube video](https://www.youtube.com/watch?v=QuH_9OGrVt4) in which I discovered this idea for a project from and **Himanshu Tyagi**, who authored [the initial post referenced in CyberFault's video](https://www.codeitbro.com/how-to-create-keylogger-in-python/).
 
