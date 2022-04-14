@@ -21,7 +21,7 @@ title                    : "Blasterman's Base"
 title_separator          : "|"
 subtitle                 : # "Building better boxes :)" # site tagline that appears below site title in masthead
 name                     : "Joffrey"
-description              : # "A simple website collect my thoughts and upload information."
+description              : "A website for posting write-ups and cool projects that I'm working on."
 url                      : "https://blasterman.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/blastermans-base" # the subpath of your site, e.g. "/blog"
 repository               : "blasterman/blastermans-base" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -59,7 +59,7 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-  hide                   : # true, false (default)
+  hide                   : true # true, false (default)
 search                   : true # true, false (default)
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
