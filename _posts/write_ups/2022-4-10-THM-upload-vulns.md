@@ -1,7 +1,8 @@
 ---
+permalink: /THM-upload-vulns/
 title: "TryHackMe - Upload Vulnerabilities"
 date: 2022-04-10
-catgories: Write-Ups
+categories: Write-Ups
 ---
 
 Hello! This is my write-up for the THM room "Upload Vulnerabilities" (and also my first one overall).
