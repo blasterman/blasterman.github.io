@@ -293,6 +293,7 @@ defaults:
       comments: false
       share: true
       related: true
+      show_date: true
   # _pages
   - scope:
       path: ""
@@ -310,6 +311,18 @@ defaults:
       read_time: true
       comments: false
       share: true
+      show_date: true
+  # projects
+  - scope:
+      path: "_posts/projects"
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      show_date: true
   # tags
   - scope:
       path: ""
