@@ -1,7 +1,7 @@
 ---
 title: Write-Ups
 layout: category
-permalink: /write-ups/
+permalink: /categories/write-ups/
 taxonomy: write-ups
 ---
 
