@@ -1,6 +1,6 @@
 ---
-title:  "TryHackMe - Upload Vulnerabilities"
-date:   2022-04-10
+title: "TryHackMe - Upload Vulnerabilities"
+date: 2022-04-10
 ---
 
 Hello! This is my write-up for the THM room "Upload Vulnerabilities" (and also my first one overall).

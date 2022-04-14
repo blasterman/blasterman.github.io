@@ -1,6 +1,6 @@
 ---
-title:  "First Post - Creation & Goals"
-date:   2022-03-25
+title: "First Post - Creation & Goals"
+date: 2022-03-25
 categories:
   - Posts
 ---
