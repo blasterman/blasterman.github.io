@@ -1,9 +1,10 @@
 ---
+title: "Hello."
 layout: splash
 permalink: /home/
 hidden: true
 header:
     overlay_image: /assets/images/1614303458958.jpg
-excerpt: >
-    <small>A website for posting my projects, ideas, and write-ups.</small>
+intro:
+    - excerpt: 'Welcome to my website! This place is home for posts regarding my projects, ideas, and write-ups. Feel free to look around and browse what I've got.
 ---
