@@ -1,7 +1,7 @@
 ---
 layout: splash
 permalink: /home/
-title: "Hello 🖐"
+title: "Hello :)"
 hidden: true
 header:
     overlay_color: "#000"
