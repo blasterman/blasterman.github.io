@@ -72,7 +72,6 @@ And there we have it. All of my keystrokes were recorded and saved to this text 
 
 Admittedly, while I was able to successfully create, run, and view the results of this Python keylogger, it relies on Python libraries that must be already by installed on the target computer. However, it was fun making this script to test and see in action a program that actively records every keystroke sent by the user. 
 
-In the future, I work on making a keylogger that doesn't rely on extra libraries or binaries but instead utilizes programming that comes bundled with the target OS. That would be a more independent program than this one and, thus, more awesome. With that, it's onto the next project...
+In the future, I work on making a keylogger that doesn't rely on extra libraries or binaries but instead utilizes programming that comes bundled with the target OS. That would be a more independent program than this one and, thus, more awesome. 
 
-
-Thanks for reading!
+Now, it's onto the next project...
