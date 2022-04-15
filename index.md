@@ -1,6 +1,5 @@
 ---
 layout: splash
-permalink: /home/
 title: "Hello :)"
 hidden: true
 header:
