@@ -1,7 +1,7 @@
 ---
 permalink: /home/
-title: "Hello"
 layout: splash
+title: "Hello"
 hidden: true
 header:
     overlay_image: /assets/images/1614303458958.jpg
