@@ -4,7 +4,7 @@ date: 2022-04-17
 categories: Projects
 ---
 
-This post is a sequel to [this one](https://blasterman.github.io/blastermans-base/projects/keylogger/) that I wrote prior on making a simple keylogger in Python. Earlier, I wrote that I would like to try out using a keylogger written in Powershell or something similar that utilizes a language a fresh Windows installation would be able to run without any extra binaries or libraries. However, thanks to David Bombal and his video, I’ve discovered that there is a way of merging both writing a keylogging script in Python AND allowing said script to run on a Windows machine that doesn’t have Python installed.
+This post is a sequel to [this one](https://blasterman.github.io/blastermans-base/projects/keylogger/) that I wrote prior on making a simple keylogger in Python. Earlier, I wrote that I would like to try out using a keylogger written in Powershell or something similar that utilizes a language a fresh Windows installation would be able to run without any extra binaries or libraries. However, thanks to David Bombal and [his video](https://www.youtube.com/watch?v=qaZ-IbssPDI), I’ve discovered that there is a way of merging both writing a keylogging script in Python AND allowing said script to run on a Windows machine that doesn’t have Python installed.
 
 In the description for his video, David has a link to a pdf he made that outlines the step-by-step process he took to create an executable of a Python keylogger. It can be found at the following link:
 
@@ -15,7 +15,7 @@ The first order of business is to install Nuitka, the program that will convert 
 
 ![nuitka install](/blastermans-base/assets/images/projects/keylogger2/nuitka-install.png)
 
-Great! Now that it’s installed, let’s make sure it works:
+Great! Let's make sure it properly configured and ready to go:
 
 ![nuitka version](/blastermans-base/assets/images/projects/keylogger2/nuitka-version.png)
 
