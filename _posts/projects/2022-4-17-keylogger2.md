@@ -11,13 +11,13 @@ In the description for his video, David has a link to a pdf he made that outline
 [https://www.dropbox.com/s/tb0w3b02j3l9rid/Installing%20Nuitka.pdf?dl=0](https://www.dropbox.com/s/tb0w3b02j3l9rid/Installing%20Nuitka.pdf?dl=0)
 
 ***
-The first order of business is to install Nuitka, the program that will convert my Python script to a Windows executable. Since I already have Python on my computer, I can use *pip* to install the correct version of Nuitka for the version of Python I have using *python -m pip install -U nuitka*.
+The first order of business is to install Nuitka, the program that will convert my Python script to a Windows executable. Since I already have Python on my computer, I can use *pip* to install the correct version of Nuitka for the version of Python I have using `python -m pip install -U nuitka`.
 
-![nuitka install](blastermans-base/assets/images/projects/keylogger2/nuitka-install.png)
+![nuitka install](/blastermans-base/assets/images/projects/keylogger2/nuitka-install.png)
 
 Great! Now that it’s installed, let’s make sure it works:
 
-![nuitka version](blastermans-base/assets/images/projects/keylogger2/nuitka-version.png)
+![nuitka version](/blastermans-base/assets/images/projects/keylogger2/nuitka-version.png)
 
 👍
 
@@ -48,21 +48,20 @@ Once saved, I’ll need to run a command in Python that instructs Nuitka to conv
 
 (Make sure to agree to both prompts in the terminal)
 
-![nuitka file creation](blastermans-base/assets/images/projects/keylogger2/nuitka-file-creation.png)
+![nuitka file creation](/blastermans-base/assets/images/projects/keylogger2/nuitka-file-creation.png)
 
 Done!
 
 ***
 
 Now that the script has been compiled, it’s time to give it a go by `.\myfile.exe`. I’ll give it some time and come back later to see what the script has recorded.
-<br/>
+
 ...
-<br/>
+
 Nah. Let’s look right now and see what I’ve got:
 
-![captured keys](blastermans-base/assets/images/projects/keylogger2/captured-keys.png)
+![captured keys](/blastermans-base/assets/images/projects/keylogger2/captured-keys.png)
 
 Heh. It works just like the last one I used! 😁
-<br/>
-<br/>
+
 Much thanks to David for making that video and demonstrating that there is a way to run Python scripts on Windows without needing to have the library already preinstalled on the target machine. This was a good amount of fun. Besides, who knows what interesting applications this will have in the future… 😎
