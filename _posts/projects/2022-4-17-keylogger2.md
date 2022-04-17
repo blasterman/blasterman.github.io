@@ -42,9 +42,9 @@ with Listener(on_press=on_press) as listener:
 }
 ```
 
-Once saved, I’ll need to run a command in Python that instructs Nuitka to convert my *.py* file to a *.exe*. The command goes like this:
+Once saved, I’ll need to run a command in Python that instructs Nuitka to convert my `.py` file to a `.exe`. The command goes like this:
 
-*py -m nuitka--mingw64 <filename>.py --standalone --onefile*
+`py -m nuitka--mingw64 <filename>.py --standalone --onefile`
 
 (Make sure to agree to both prompts in the terminal)
 
@@ -54,15 +54,15 @@ Done!
 
 ***
 
-Now that the script has been compiled, it’s time to give it a go by *.\myfile.exe*. I’ll give it some time and come back later to see what the script has recorded.
-
-***
-
-Well, I got a little impatient. Let’s look right now and see what I’ve got:
+Now that the script has been compiled, it’s time to give it a go by `.\myfile.exe`. I’ll give it some time and come back later to see what the script has recorded.
+<br/>
+...
+<br/>
+Nah. Let’s look right now and see what I’ve got:
 
 ![captured keys](blastermans-base/assets/images/projects/keylogger2/captured-keys.png)
 
 Heh. It works just like the last one I used! 😁
-<br></br>
-<br></br>
+<br/>
+<br/>
 Much thanks to David for making that video and demonstrating that there is a way to run Python scripts on Windows without needing to have the library already preinstalled on the target machine. This was a good amount of fun. Besides, who knows what interesting applications this will have in the future… 😎
